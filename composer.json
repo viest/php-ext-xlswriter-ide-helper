@@ -1,0 +1,19 @@
+{
+    "name": "viest/php-ext-xlswriter-ide-helper",
+    "description": "PHP Extension Xlswriter IDE Helper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "viest",
+            "email": "wjx@php.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vtiful\\Kernel\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7"
+    }
+}
