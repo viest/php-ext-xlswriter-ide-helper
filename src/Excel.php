@@ -349,6 +349,40 @@ class Excel
     }
 
     /**
+     * File to csv
+     *
+     * @param resource $handler
+     *
+     * Example:
+     *
+     * $fp = fopen('path', 'w');
+     * putCSV($fp)
+     *
+     * $fp = fopen('php://memory', 'w');
+     * putCSV($fp)
+     *
+     * @return bool
+     *
+     * @author viest
+     */
+    public function putCSV(resource $handler): bool
+    {
+        return true;
+    }
+
+    /**
+     * Sheet list
+     *
+     * @return array
+     *
+     * @author viest
+     */
+    public function sheetList(): array
+    {
+        return [];
+    }
+
+    /**
      * Set row cell data type
      *
      * @param array $types
@@ -455,5 +489,45 @@ class Excel
     public function zoom(int $scale = 100): self
     {
         return $this;
+    }
+
+    /**
+     * Column index from string
+     *
+     * @param string $cellCoordinates
+     *
+     * Example:
+     *
+     * columnIndexFromString('A')
+     * columnIndexFromString('G')
+     * columnIndexFromString('AC')
+     *
+     * @return int
+     *
+     * @author viest
+     */
+    public static function columnIndexFromString(string $cellCoordinates): int
+    {
+        return 0;
+    }
+
+    /**
+     * String from column index
+     *
+     * @param int $cellCoordinates
+     *
+     * Example:
+     *
+     * stringFromColumnIndex(0)
+     * stringFromColumnIndex(28)
+     * stringFromColumnIndex(61)
+     *
+     * @return string
+     *
+     * @author viest
+     */
+    public static function stringFromColumnIndex(int $cellCoordinates): string
+    {
+        return '';
     }
 }

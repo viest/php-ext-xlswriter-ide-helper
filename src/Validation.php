@@ -11,33 +11,33 @@ namespace Vtiful\Kernel;
  */
 class Validation
 {
-    const VALIDATION_TYPE_INTEGER = 0x0;
-    const VALIDATION_TYPE_INTEGER_FORMULA = 0x0;
-    const VALIDATION_TYPE_DECIMAL = 0x0;
-    const VALIDATION_TYPE_DECIMAL_FORMULA = 0x0;
-    const VALIDATION_TYPE_LIST = 0x0;
-    const VALIDATION_TYPE_LIST_FORMULA = 0x0;
-    const VALIDATION_TYPE_DATE = 0x0;
-    const VALIDATION_TYPE_DATE_FORMULA = 0x0;
-    const VALIDATION_TYPE_TIME = 0x0;
-    const VALIDATION_TYPE_TIME_FORMULA = 0x0;
-    const VALIDATION_TYPE_LENGTH = 0x0;
-    const VALIDATION_TYPE_LENGTH_FORMULA = 0x0;
-    const VALIDATION_TYPE_CUSTOM_FORMULA = 0x0;
-    const VALIDATION_TYPE_ANY = 0x0;
+    const TYPE_INTEGER = 0x0;
+    const TYPE_INTEGER_FORMULA = 0x0;
+    const TYPE_DECIMAL = 0x0;
+    const TYPE_DECIMAL_FORMULA = 0x0;
+    const TYPE_LIST = 0x0;
+    const TYPE_LIST_FORMULA = 0x0;
+    const TYPE_DATE = 0x0;
+    const TYPE_DATE_FORMULA = 0x0;
+    const TYPE_TIME = 0x0;
+    const TYPE_TIME_FORMULA = 0x0;
+    const TYPE_LENGTH = 0x0;
+    const TYPE_LENGTH_FORMULA = 0x0;
+    const TYPE_CUSTOM_FORMULA = 0x0;
+    const TYPE_ANY = 0x0;
 
-    const VALIDATION_CRITERIA_BETWEEN = 0x0;
-    const VALIDATION_CRITERIA_NOT_BETWEEN = 0x0;
-    const VALIDATION_CRITERIA_EQUAL_TO = 0x0;
-    const VALIDATION_CRITERIA_NOT_EQUAL_TO = 0x0;
-    const VALIDATION_CRITERIA_GREATER_THAN = 0x0;
-    const VALIDATION_CRITERIA_LESS_THAN = 0x0;
-    const VALIDATION_CRITERIA_GREATER_THAN_OR_EQUAL_TO = 0x0;
-    const VALIDATION_CRITERIA_LESS_THAN_OR_EQUAL_TO = 0x0;
+    const CRITERIA_BETWEEN = 0x0;
+    const CRITERIA_NOT_BETWEEN = 0x0;
+    const CRITERIA_EQUAL_TO = 0x0;
+    const CRITERIA_NOT_EQUAL_TO = 0x0;
+    const CRITERIA_GREATER_THAN = 0x0;
+    const CRITERIA_LESS_THAN = 0x0;
+    const CRITERIA_GREATER_THAN_OR_EQUAL_TO = 0x0;
+    const CRITERIA_LESS_THAN_OR_EQUAL_TO = 0x0;
 
-    const VALIDATION_ERROR_TYPE_STOP = 0x0;
-    const VALIDATION_ERROR_TYPE_WARNING = 0x0;
-    const VALIDATION_ERROR_TYPE_INFORMATION = 0x0;
+    const ERROR_TYPE_STOP = 0x0;
+    const ERROR_TYPE_WARNING = 0x0;
+    const ERROR_TYPE_INFORMATION = 0x0;
 
     /**
      * Validation constructor.
@@ -52,7 +52,7 @@ class Validation
      *
      * @param int $validationType
      *
-     * Examples: \Vtiful\Kernel\Validation::VALIDATION_TYPE_INTEGER
+     * Examples: \Vtiful\Kernel\Validation::TYPE_INTEGER
      *
      * @return $this
      *
@@ -68,7 +68,7 @@ class Validation
      *
      * @param int $criteriaType
      *
-     * Examples: \Vtiful\Kernel\Validation::VALIDATION_CRITERIA_BETWEEN
+     * Examples: \Vtiful\Kernel\Validation::CRITERIA_BETWEEN
      *
      * @return $this
      *
@@ -126,7 +126,7 @@ class Validation
      *
      * @param int $type
      *
-     * Examples: \Vtiful\Kernel\Validation::VALIDATION_ERROR_TYPE_STOP
+     * Examples: \Vtiful\Kernel\Validation::ERROR_TYPE_STOP
      *
      * @return $this
      *
@@ -307,6 +307,8 @@ class Validation
 
     /**
      * Get validation resource
+     *
+     * @return resource
      *
      * @author viest
      */
