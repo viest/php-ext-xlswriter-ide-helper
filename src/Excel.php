@@ -318,6 +318,20 @@ class Excel
     }
 
     /**
+     * Default format
+     *
+     * @param resource $formatHandle
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function defaultFormat($formatHandle): self
+    {
+        return $this;
+    }
+
+    /**
      * Open xlsx file
      *
      * @param string $fileName
