@@ -257,15 +257,16 @@ class Excel
     /**
      * Insert Formula on the cell
      *
-     * @param int    $row
-     * @param int    $column
-     * @param string $formula
+     * @param int           $row
+     * @param int           $column
+     * @param string        $formula
+     * @param resource|null $formatHandle
      *
      * @return Excel
      *
      * @author viest
      */
-    public function insertFormula(int $row, int $column, string $formula): self
+    public function insertFormula(int $row, int $column, string $formula, $formatHandle = NULL): self
     {
         return $this;
     }
@@ -273,14 +274,15 @@ class Excel
     /**
      * Merge cells
      *
-     * @param string $range
-     * @param string $data
+     * @param string        $range
+     * @param string        $data
+     * @param resource|null $formatHandle
      *
      * @return Excel
      *
      * @author viest
      */
-    public function MergeCells(string $range, string $data): self
+    public function mergeCells(string $range, string $data, $formatHandle = NULL): self
     {
         return $this;
     }
