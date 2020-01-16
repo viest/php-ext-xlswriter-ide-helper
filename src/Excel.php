@@ -368,6 +368,9 @@ class Excel
      * File to csv
      *
      * @param resource $handler
+     * @param string   $delimiter
+     * @param string   $enclosure
+     * @param string   $escape
      *
      * Example:
      *
@@ -381,7 +384,25 @@ class Excel
      *
      * @author viest
      */
-    public function putCSV(resource $handler): bool
+    public function putCSV(resource $handler, string $delimiter = ',', string $enclosure = '"', string $escape = '\\'): bool
+    {
+        return true;
+    }
+
+    /**
+     * File to csv
+     *
+     * @param callable $callback
+     * @param resource $handler
+     * @param string   $delimiter
+     * @param string   $enclosure
+     * @param string   $escape
+     *
+     * @return bool
+     *
+     * @author viest
+     */
+    public function putCSVCallback(callable $callback, resource $handler, string $delimiter = ',', string $enclosure = '"', string $escape = '\\'): bool
     {
         return true;
     }
