@@ -19,6 +19,7 @@ class Excel
     const SKIP_NONE = 0x00;
     const SKIP_EMPTY_ROW = 0x01;
     const SKIP_EMPTY_CELLS = 0x02;
+    const SKIP_EMPTY_VALUE = 0X100;
 
     const GRIDLINES_HIDE_ALL = 0;
     const GRIDLINES_SHOW_SCREEN = 1;
@@ -434,6 +435,20 @@ class Excel
     }
 
     /**
+     * Set skip rows
+     *
+     * @param int $rows
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function setSkipRows(int $rows): self
+    {
+        return $this;
+    }
+
+    /**
      * Read values from the sheet
      *
      * @return array
@@ -462,6 +477,8 @@ class Excel
      *
      * @param callable    $callback  function(int $row, int $cell, string $data)
      * @param string|NULL $sheetName sheet name
+     *
+     * @return void
      *
      * @author viest
      */
