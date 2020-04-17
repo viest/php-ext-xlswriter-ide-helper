@@ -83,7 +83,7 @@ class Excel
      *
      * @author viest
      */
-    public function addSheet(?string $sheetName): self
+    public function addSheet(string $sheetName): self
     {
         return $this;
     }
@@ -482,7 +482,7 @@ class Excel
      *
      * @author viest
      */
-    public function nextCellCallback(callable $callback, string $sheetName = NULL): void
+    public function nextCellCallback(callable $callback, string $sheetName = NULL)
     {
         //
     }
