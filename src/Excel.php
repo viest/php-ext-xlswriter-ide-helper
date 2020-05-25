@@ -103,6 +103,20 @@ class Excel
     }
 
     /**
+     * Set activate sheet
+     *
+     * @param string $sheetName
+     *
+     * @return bool
+     *
+     * @author viest
+     */
+    public function activateSheet(string $sheetName): bool
+    {
+        return true;
+    }
+
+    /**
      * Insert data on the first line of the worksheet
      *
      * @param array $header
