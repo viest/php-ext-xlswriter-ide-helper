@@ -287,6 +287,34 @@ class Excel
     }
 
     /**
+     * Insert comment on the cell
+     *
+     * @param int    $row
+     * @param int    $column
+     * @param string $comment
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function insertComment(int $row, int $column, string $comment): self
+    {
+        return $this;
+    }
+
+    /**
+     * Show comment on the sheet
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function showComment(): self
+    {
+        return $this;
+    }
+
+    /**
      * Merge cells
      *
      * @param string        $range
@@ -597,5 +625,19 @@ class Excel
     public static function stringFromColumnIndex(int $cellCoordinates): string
     {
         return '';
+    }
+
+    /**
+     * Timestamp from double date
+     *
+     * @param float $date
+     *
+     * @return int
+     *
+     * @author viest
+     */
+    public static function timestampFromDateDouble(float $date): int
+    {
+        return 0;
     }
 }
