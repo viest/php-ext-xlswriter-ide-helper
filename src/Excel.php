@@ -240,13 +240,15 @@ class Excel
      * @param int           $row
      * @param int           $column
      * @param string        $url
+     * @param string        $text
+     * @param string        $toolTip
      * @param resource|null $formatHandle
      *
      * @return Excel
      *
      * @author viest
      */
-    public function insertUrl(int $row, int $column, string $url, $formatHandle = NULL): self
+    public function insertUrl(int $row, int $column, string $url, string $text = NULL, string $toolTip = NULL, $formatHandle = NULL): self
     {
         return $this;
     }
