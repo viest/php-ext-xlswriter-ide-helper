@@ -14,7 +14,6 @@
         }
     },
     "require": {
-        "php": ">=7",
-        "ext-xlswriter": "*"
+        "php": ">=7"
     }
 }
