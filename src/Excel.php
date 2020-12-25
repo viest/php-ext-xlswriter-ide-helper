@@ -620,6 +620,30 @@ class Excel
     }
 
     /**
+     * Set current worksheet hide
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function setCurrentSheetHide(): self
+    {
+        return $this;
+    }
+
+    /**
+     * Set current worksheet first
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function setCurrentSheetIsFirst(): self
+    {
+        return $this;
+    }
+
+    /**
      * Column index from string
      *
      * @param string $cellCoordinates
