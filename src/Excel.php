@@ -2,6 +2,8 @@
 
 namespace Vtiful\Kernel;
 
+use Exception;
+
 /**
  * Class Excel
  *
@@ -30,10 +32,14 @@ class Excel
      * Excel constructor.
      *
      * @param array $config
+     *
+     * @throws Exception
      */
     public function __construct(array $config)
     {
-        //
+        if (!extension_loaded('xlswriter')) {
+            throw new Exception('xlswriter extension is not installed, please install extension');
+        }
     }
 
     /**
@@ -585,6 +591,30 @@ class Excel
      * @author viest
      */
     public function zoom(int $scale = 100): self
+    {
+        return $this;
+    }
+
+    /**
+     * Set printed portrait
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function setPrintedPortrait(): self
+    {
+        return $this;
+    }
+
+    /**
+     * Set printed landscape
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function setPrintedLandscape(): self
     {
         return $this;
     }
