@@ -21,6 +21,7 @@ class Excel
     const SKIP_NONE = 0x00;
     const SKIP_EMPTY_ROW = 0x01;
     const SKIP_EMPTY_CELLS = 0x02;
+    const SKIP_HIDDEN_ROW = 0x08;
     const SKIP_EMPTY_VALUE = 0X100;
 
     const GRIDLINES_HIDE_ALL = 0;

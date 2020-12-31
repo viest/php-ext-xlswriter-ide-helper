@@ -239,6 +239,18 @@ class Format
     }
 
     /**
+     * Unlocked
+     *
+     * @return $this
+     *
+     * @author viest
+     */
+    public function unlocked(): self
+    {
+        return $this;
+    }
+
+    /**
      * Cell background
      *
      * @param int $color   const COLOR_****
