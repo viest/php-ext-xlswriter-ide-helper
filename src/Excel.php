@@ -486,6 +486,20 @@ class Excel
     }
 
     /**
+     * Set global date type
+     *
+     * @param int $rowType
+     *
+     * @return Excel
+     *
+     * @author viest
+     */
+    public function setGlobalType(int $rowType): self
+    {
+        return $this;
+    }
+
+    /**
      * Set skip rows
      *
      * @param int $rows
