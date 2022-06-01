@@ -47,6 +47,9 @@ class Chart
     const CHART_LEGEND_OVERLAY_RIGHT = 0;
     const CHART_LEGEND_OVERLAY_LEFT = 0;
 
+    const CHART_LINE_STACKED = 0;
+    const CHART_LINE_STACKED_PERCENT = 0;
+
     /**
      * Chart constructor.
      *

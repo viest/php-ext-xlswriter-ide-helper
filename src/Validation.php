@@ -194,6 +194,18 @@ class Validation
     }
 
     /**
+     * Value Datetime
+     *
+     * @param int $timestamp
+     *
+     * @return $this
+     */
+    public function valueDatetime(int $timestamp): self
+    {
+        return $this;
+    }
+
+    /**
      * Minimum number
      *
      * @param float $minimumNumber
@@ -222,6 +234,18 @@ class Validation
     }
 
     /**
+     * Minimum Datetime
+     *
+     * @param int $timestamp
+     *
+     * @return $this
+     */
+    public function minimumDatetime(int $timestamp): self
+    {
+        return $this;
+    }
+
+    /**
      * Maximum number
      *
      * @param float $maximumNumber
@@ -245,6 +269,18 @@ class Validation
      * @author viest
      */
     public function maximumFormula(string $formula): self
+    {
+        return $this;
+    }
+
+    /**
+     * Maximum Datetime
+     *
+     * @param int $timestamp
+     *
+     * @return $this
+     */
+    public function maximumDatetime(int $timestamp): self
     {
         return $this;
     }
@@ -315,20 +351,5 @@ class Validation
     public function toResource()
     {
         // return resource;
-    }
-
-    public function valueDatetime()
-    {
-        // TODO
-    }
-
-    public function maximumDatetime()
-    {
-        // TODO
-    }
-
-    public function minimumDatetime()
-    {
-        // TODO
     }
 }
