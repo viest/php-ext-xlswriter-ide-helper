@@ -559,7 +559,7 @@ class Excel
     /**
      * Worksheet zoom
      *
-     * Set the worksheet zoom factor in the range 10 <= zoom <= 400:
+     * Set the worksheet zoom factor in the range 10 <= zoom <= 400
      *
      * @param int $scale
      *
@@ -600,6 +600,20 @@ class Excel
      * @return $this
      */
     public function setLandscape(): self
+    {
+        return $this;
+    }
+
+    /**
+     * Set Print Scale
+     *
+     * Set the print scale factor in the range 10 <= scale <= 400
+     *
+     * @param int $scale
+     *
+     * @return $this
+     */
+    public function setPrintScale(int $scale): self
     {
         return $this;
     }
