@@ -445,14 +445,17 @@ class Excel
      * Set column cells width or format
      *
      * @param string        $range
-     * @param float         $cellWidth
+     * @param float         $width
      * @param resource|null $formatHandle
+     * @param int           $level
+     * @param bool          $collapsed
+     * @param bool          $hidden
      *
      * @return Excel
      *
      * @author viest
      */
-    public function setColumn(string $range, float $cellWidth, $formatHandle = NULL): self
+    public function setColumn(string $range, float $width, $formatHandle = NULL, int $level = 0, bool $collapsed = false, bool $hidden = false): self
     {
         return $this;
     }
@@ -461,14 +464,17 @@ class Excel
      * Set row cells height or format
      *
      * @param string        $range
-     * @param float         $cellHeight
+     * @param float         $height
      * @param resource|null $formatHandle
+     * @param int           $level
+     * @param bool          $collapsed
+     * @param bool          $hidden
      *
      * @return Excel
      *
      * @author viest
      */
-    public function setRow(string $range, float $cellHeight, $formatHandle = NULL): self
+    public function setRow(string $range, float $height, $formatHandle = NULL, int $level = 0, bool $collapsed = false, bool $hidden = false): self
     {
         return $this;
     }
@@ -510,6 +516,21 @@ class Excel
      * @author viest
      */
     public function defaultFormat($formatHandle): self
+    {
+        return $this;
+    }
+
+    /**
+     * Default row outline level, collapsed/hidden options,
+     * used when writing data with Excel::data() method.
+     *
+     * @param int  $level
+     * @param bool $collapsed
+     * @param bool $hidden
+     *
+     * @return $this
+     */
+    public function defaultRowOptions(int $level = 0, bool $collapsed = false, bool $hidden = false): self
     {
         return $this;
     }
