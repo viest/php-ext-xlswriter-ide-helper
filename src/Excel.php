@@ -1420,6 +1420,40 @@ class Excel
     }
 
     /**
+     * Evaluate a formula and return its computed value.
+     *
+     * The formula is evaluated with the current worksheet as context (so cell
+     * references such as A1 are resolved against the open sheet when there is
+     * one). Returns int/float for numbers, bool for logicals, string for text
+     * or an error code (e.g. "#DIV/0!"), and null for a blank result.
+     *
+     * @param string $formula
+     *
+     * @return int|float|bool|string|null
+     *
+     * @throws Exception
+     */
+    public function evaluateFormula(string $formula)
+    {
+        return null;
+    }
+
+    /**
+     * Toggle formula computation for the workbook on output().
+     *
+     * When enabled, cached formula results are computed and written alongside
+     * the formulas so readers that do not recalculate still see values.
+     *
+     * @param bool $enable
+     *
+     * @return $this
+     */
+    public function computeFormula(bool $enable = true): self
+    {
+        return $this;
+    }
+
+    /**
      * Next Cell In Callback
      *
      * @param callable    $callback  function(int $row, int $cell, string $data)

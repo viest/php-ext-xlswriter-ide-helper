@@ -19,8 +19,10 @@ class Validation
     const TYPE_LIST_FORMULA = 0x0;
     const TYPE_DATE = 0x0;
     const TYPE_DATE_FORMULA = 0x0;
+    const TYPE_DATE_NUMBER = 0x0;
     const TYPE_TIME = 0x0;
     const TYPE_TIME_FORMULA = 0x0;
+    const TYPE_TIME_NUMBER = 0x0;
     const TYPE_LENGTH = 0x0;
     const TYPE_LENGTH_FORMULA = 0x0;
     const TYPE_CUSTOM_FORMULA = 0x0;
